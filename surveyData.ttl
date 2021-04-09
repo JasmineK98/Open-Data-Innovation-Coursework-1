@@ -1,0 +1,3597 @@
+@prefix : <http://example.org/data/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix survey: <http://example.org/schema/survey/> .
+
+:MiningAndQuarrying rdf:type survey:Industry ;
+	 dc:title "Mining And Quarrying" .
+
+:Manufacturing rdf:type survey:Industry ;
+	 dc:title "Manufacturing" .
+
+:WaterSupplySewerageWasteManagementAndRemediationActivities rdf:type survey:Industry ;
+	 dc:title "Water Supply, Sewerage, Waste Management And Remediation Activities" .
+
+:Construction rdf:type survey:Industry ;
+	 dc:title "Construction" .
+
+:WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles rdf:type survey:Industry ;
+	 dc:title "Wholesale And Retail Trade; Repair Of Motor Vehicles And Motorcycles" .
+
+:AccommodationAndFoodServiceActivities rdf:type survey:Industry ;
+	 dc:title "Accommodation And Food Service Activities" .
+
+:TransportationAndStorage rdf:type survey:Industry ;
+	 dc:title "Transportation And Storage" .
+
+:InformationAndCommunication rdf:type survey:Industry ;
+	 dc:title "Information And Communication" .
+
+:RealEstateActivities rdf:type survey:Industry ;
+	 dc:title "Real Estate Activities" .
+
+:ProfessionalScientificAndTechnicalActivities rdf:type survey:Industry ;
+	 dc:title "Professional, Scientific And Technical Activities" .
+
+:AdministrativeAndSupportServiceActivities rdf:type survey:Industry ;
+	 dc:title "Administrative And Support Service Activities" .
+
+:Education rdf:type survey:Industry ;
+	 dc:title "Education" .
+
+:HumanHealthAndSocialWorkActivities rdf:type survey:Industry ;
+	 dc:title "Human Health And Social Work Activities" .
+
+:ArtsEntertainmentAndRecreation rdf:type survey:Industry ;
+	 dc:title "Arts, Entertainment And Recreation" .
+
+:OtherServiceActivities rdf:type survey:Industry ;
+	 dc:title "Other Service Activities" .
+
+:AllIndustries rdf:type survey:Industry ;
+	 dc:title "All Industries" .
+
+:LessThan250 rdf:type survey:WorkforceSize;
+	 dc:title "Workforce Size 0 - 249" .
+
+:250AndMore rdf:type survey:WorkforceSize;
+	 dc:title "Workforce Size 250 +" .
+
+:Total rdf:type survey:WorkforceSize;
+	 dc:title "Total" .
+
+:Between0And99 rdf:type survey:WorkforceSize;
+	 dc:title "Workforce Size 0 - 99" .
+
+:Between100And249 rdf:type survey:WorkforceSize;
+	 dc:title "Workforce Size 100 - 249" .
+
+:ContinuingTrade rdf:type survey:TradingStatus;
+	 dc:title "Continuing to trade" .
+
+:CeasedTrade rdf:type survey:TradingStatus;
+	 dc:title "Has permanently ceased trading" .
+
+:PausedTrade rdf:type survey:TradingStatus;
+	 dc:title "Has temporarily closed or temporarily paused trading" .
+
+:England rdf:type survey:Country;
+	 dc:title "England" .
+
+:Wales rdf:type survey:Country;
+	 dc:title "Wales" .
+
+:Scotland rdf:type survey:Country;
+	 dc:title "Scotland" .
+
+:NorthernIreland rdf:type survey:Country;
+	 dc:title "Northern Ireland" .
+
+:UnitedKingdom rdf:type survey:Country;
+	 dc:title "UK" .
+
+:CoronavirusScheme rdf:type survey:Initiative;
+	 dc:title "Coronavirus Job Retention Scheme" .
+
+:BusinessRatesHoliday rdf:type survey:Initiative;
+	 dc:title "Business rates holiday" .
+
+:DeferringVAT rdf:type survey:Initiative;
+	 dc:title "Deferring VAT payments" .
+
+:HMRCScheme rdf:type survey:Initiative;
+	 dc:title "HMRC Time To Pay scheme" .
+
+:GovernmentGrantLoanSchemes rdf:type survey:Initiative;
+	 dc:title "Government-funded small business grant or loan schemes" .
+
+:FinanceAgreements rdf:type survey:Initiative;
+	 dc:title "Accredited finance agreements" .
+
+:None rdf:type survey:Initiative;
+	 dc:title "None" .
+
+:ds1 rdf:type qb:DataSet ;
+	 dc:title "Sample for the BICS survey broken down by industry" .
+
+:ds1_1_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :MiningAndQuarrying ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfSurveysSent 15.
+
+:ds1_1_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :MiningAndQuarrying ;
+	 survey:WorkforceSize :250AndMore  ;
+     survey:NumberOfSurveysSent 13.
+
+:ds1_1_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :MiningAndQuarrying ;
+	 survey:WorkforceSize :Total  ;
+     survey:NumberOfSurveysSent 28.
+
+:ds1_2_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :Manufacturing ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfSurveysSent 1785.
+
+:ds1_2_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :Manufacturing ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfSurveysSent 1370.
+
+:ds1_2_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :Manufacturing ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfSurveysSent 3155.
+
+:ds1_3_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfSurveysSent 130.
+
+:ds1_3_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfSurveysSent 71.
+
+:ds1_3_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfSurveysSent 201.
+
+:ds1_4_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :Construction ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfSurveysSent 722.
+
+:ds1_4_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :Construction ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfSurveysSent 312.
+
+:ds1_4_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :Construction ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfSurveysSent 1034.
+
+:ds1_5_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfSurveysSent 1819.
+
+:ds1_5_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfSurveysSent 1180.
+
+:ds1_5_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfSurveysSent 2999.
+
+:ds1_6_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfSurveysSent 975.
+
+:ds1_6_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfSurveysSent 659.
+
+:ds1_6_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfSurveysSent 1634.
+
+:ds1_7_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfSurveysSent 528.
+
+:ds1_7_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfSurveysSent 335.
+
+:ds1_7_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfSurveysSent 863.
+
+:ds1_8_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfSurveysSent 794.
+
+:ds1_8_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfSurveysSent 422.
+
+:ds1_8_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfSurveysSent 1216.
+
+:ds1_9_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :RealEstateActivities ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfSurveysSent 112.
+
+:ds1_9_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :RealEstateActivities ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfSurveysSent 88.
+
+:ds1_9_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :RealEstateActivities ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfSurveysSent 200.
+
+:ds1_10_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfSurveysSent 1303.
+
+:ds1_10_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfSurveysSent 720.
+
+:ds1_10_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfSurveysSent 2023.
+
+:ds1_11_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfSurveysSent 1287.
+
+:ds1_11_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfSurveysSent 1072.
+
+:ds1_11_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfSurveysSent 2359.
+
+:ds1_12_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :Education ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfSurveysSent 303.
+
+:ds1_12_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :Education ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfSurveysSent 457.
+
+:ds1_12_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :Education ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfSurveysSent 760.
+
+:ds1_13_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfSurveysSent 145.
+
+:ds1_13_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfSurveysSent 149.
+
+:ds1_13_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfSurveysSent 294.
+
+:ds1_14_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfSurveysSent 415.
+
+:ds1_14_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfSurveysSent 303.
+
+:ds1_14_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfSurveysSent 718.
+
+:ds1_15_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :OtherServiceActivities ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfSurveysSent 108.
+
+:ds1_15_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :OtherServiceActivities ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfSurveysSent 29.
+
+:ds1_15_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :OtherServiceActivities ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfSurveysSent 137.
+
+:ds1_16_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfSurveysSent 10442.
+
+:ds1_16_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfSurveysSent 7181.
+
+:ds1_16_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds1 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfSurveysSent 17623.
+
+:ds2 rdf:type qb:DataSet ;
+	 dc:title "Sample for the BICS survey broken down by workforce size" .
+
+:ds2_1_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds2 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :Between0And99 ;
+     survey:NumberOfSurveysSent 1326.
+
+:ds2_1_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds2 ;
+     survey:Industry :AllIndustries  ;
+	 survey:WorkforceSize :Between100And249 ;
+     survey:NumberOfSurveysSent 9116.
+
+:ds2_1_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds2 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfSurveysSent 7181.
+
+:ds2_1_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds2 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfSurveysSent 17623.
+
+:ds3 rdf:type qb:DataSet ;
+	 dc:title "Responses to the BICS survey broken down by industry" .
+
+:ds3_1_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :Manufacturing ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfResponses 648.
+
+:ds3_1_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :Manufacturing ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfResponses 449.
+
+:ds3_1_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :Manufacturing ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfResponses 1097.
+
+:ds3_2_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfResponses 50.
+
+:ds3_2_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfResponses 20.
+
+:ds3_2_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfResponses 70.
+
+:ds3_3_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :Construction ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfResponses 208.
+
+:ds3_3_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :Construction ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfResponses 76.
+
+:ds3_3_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :Construction ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfResponses 284.
+
+:ds3_4_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfResponses 686.
+
+:ds3_4_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfResponses 344.
+
+:ds3_4_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfResponses 1030.
+
+:ds3_5_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfResponses 321.
+
+:ds3_5_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfResponses 195.
+
+:ds3_5_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfResponses 516.
+
+:ds3_6_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfResponses 193.
+
+:ds3_6_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfResponses 89.
+
+:ds3_6_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfResponses 282.
+
+:ds3_7_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfResponses 297.
+
+:ds3_7_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfResponses 121.
+
+:ds3_7_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfResponses 418.
+
+:ds3_8_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfResponses 468.
+
+:ds3_8_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfResponses 265.
+
+:ds3_8_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfResponses 733.
+
+:ds3_9_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfResponses 453.
+
+:ds3_9_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfResponses 361.
+
+:ds3_9_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfResponses 814.
+
+:ds3_10_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :Education ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfResponses 127.
+
+:ds3_10_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :Education ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfResponses 191.
+
+:ds3_10_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :Education ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfResponses 318.
+
+:ds3_11_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfResponses 85.
+
+:ds3_11_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfResponses 59.
+
+:ds3_11_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfResponses 144.
+
+:ds3_12_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfResponses 180.
+
+:ds3_12_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfResponses 98.
+
+:ds3_12_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfResponses 278.
+
+:ds3_13_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:NumberOfResponses 3809.
+
+:ds3_13_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfResponses 2305.
+
+:ds3_13_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds3 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfResponses 6114.
+
+:ds4 rdf:type qb:DataSet ;
+	 dc:title "Responses to the BICS survey broken down by workforce size" .
+
+:ds4_1_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds4 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :Between0And99 ;
+     survey:NumberOfResponses 357.
+
+:ds4_1_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds4 ;
+     survey:Industry :AllIndustries  ;
+	 survey:WorkforceSize :Between100And249 ;
+     survey:NumberOfResponses 3452.
+
+:ds4_1_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds4 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:NumberOfResponses 2305.
+
+:ds4_1_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds4 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :Total ;
+     survey:NumberOfResponses 6114.
+
+:ds5 rdf:type qb:DataSet ;
+	 dc:title "Proportion of responses to the BICS survey broken down by industry" .
+
+:ds5_1_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :Manufacturing ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:ProportionOfResponses 36.3.
+
+:ds5_1_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :Manufacturing ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:ProportionOfResponses 32.8.
+
+:ds5_1_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :Manufacturing ;
+	 survey:WorkforceSize :Total ;
+     survey:ProportionOfResponses 34.8.
+
+:ds5_2_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:ProportionOfResponses 38.5.
+
+:ds5_2_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:ProportionOfResponses 28.2.
+
+:ds5_2_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:WorkforceSize :Total ;
+     survey:ProportionOfResponses 34.8.
+
+:ds5_3_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :Construction ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:ProportionOfResponses 28.8.
+
+:ds5_3_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :Construction ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:ProportionOfResponses 24.4.
+
+:ds5_3_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :Construction ;
+	 survey:WorkforceSize :Total ;
+     survey:ProportionOfResponses 27.5.
+
+:ds5_4_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:ProportionOfResponses 37.7.
+
+:ds5_4_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:ProportionOfResponses 29.2.
+
+:ds5_4_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:WorkforceSize :Total ;
+     survey:ProportionOfResponses 34.3.
+
+:ds5_5_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:ProportionOfResponses 32.9.
+
+:ds5_5_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:ProportionOfResponses 29.6.
+
+:ds5_5_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:WorkforceSize :Total ;
+     survey:ProportionOfResponses 31.6.
+
+:ds5_6_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:ProportionOfResponses 36.6.
+
+:ds5_6_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:ProportionOfResponses 26.6.
+
+:ds5_6_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:WorkforceSize :Total ;
+     survey:ProportionOfResponses 32.7.
+
+:ds5_7_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:ProportionOfResponses 37.4.
+
+:ds5_7_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:ProportionOfResponses 28.7.
+
+:ds5_7_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:WorkforceSize :Total ;
+     survey:ProportionOfResponses 34.4.
+
+:ds5_8_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:ProportionOfResponses 35.9.
+
+:ds5_8_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:ProportionOfResponses 36.8.
+
+:ds5_8_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:WorkforceSize :Total ;
+     survey:ProportionOfResponses 36.2.
+
+:ds5_9_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:ProportionOfResponses 35.2.
+
+:ds5_9_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:ProportionOfResponses 33.7.
+
+:ds5_9_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:WorkforceSize :Total ;
+     survey:ProportionOfResponses 34.5.
+
+:ds5_10_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :Education ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:ProportionOfResponses 41.9.
+
+:ds5_10_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :Education ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:ProportionOfResponses 41.8.
+
+:ds5_10_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :Education ;
+	 survey:WorkforceSize :Total ;
+     survey:ProportionOfResponses 41.8.
+
+:ds5_11_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:ProportionOfResponses 58.6.
+
+:ds5_11_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:ProportionOfResponses 39.6.
+
+:ds5_11_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:WorkforceSize :Total ;
+     survey:ProportionOfResponses 49.0.
+
+:ds5_12_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:ProportionOfResponses 43.4.
+
+:ds5_12_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:ProportionOfResponses 32.3.
+
+:ds5_12_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:WorkforceSize :Total ;
+     survey:ProportionOfResponses 38.7.
+
+:ds5_13_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :LessThan250 ;
+     survey:ProportionOfResponses 36.5.
+
+:ds5_13_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:ProportionOfResponses 32.1.
+
+:ds5_13_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds5 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :Total ;
+     survey:ProportionOfResponses 34.7.
+
+:ds6 rdf:type qb:DataSet ;
+	 dc:title "Proportion of responses to the BICS survey broken down by workforce size" .
+
+:ds6_1_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds6 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :Between0And99 ;
+     survey:ProportionOfResponses 26.9.
+
+:ds6_1_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds6 ;
+     survey:Industry :AllIndustries  ;
+	 survey:WorkforceSize :Between100And249 ;
+     survey:ProportionOfResponses 37.9.
+
+:ds6_1_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds6 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :250AndMore ;
+     survey:ProportionOfResponses 32.1.
+
+:ds6_1_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds6 ;
+     survey:Industry :AllIndustries ;
+	 survey:WorkforceSize :Total ;
+     survey:ProportionOfResponses 34.7.
+
+:ds7 rdf:type qb:DataSet ;
+	 dc:title "Current trading status; Percentage of all responding businesses broken down by industry" .
+
+:ds7_1_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :Manufacturing ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 79.0.
+
+:ds7_1_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :Manufacturing ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.4.
+
+:ds7_1_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :Manufacturing ;
+	 survey:TradingStatus :PausedTrade;
+     survey:ProportionOfResponses 20.6.
+
+:ds7_2_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 90.0.
+
+:ds7_2_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.0.
+
+:ds7_2_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:TradingStatus :PausedTrade;
+     survey:ProportionOfResponses 10.0.
+
+:ds7_3_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :Construction ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 73.2.
+
+:ds7_3_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :Construction ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.7.
+
+:ds7_3_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :Construction ;
+	 survey:TradingStatus :PausedTrade;
+     survey:ProportionOfResponses 26.1.
+
+:ds7_4_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 75.2.
+
+:ds7_4_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.5.
+
+:ds7_4_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:TradingStatus :PausedTrade;
+     survey:ProportionOfResponses 24.3.
+
+:ds7_5_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 18.2.
+
+:ds7_5_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 1.2.
+
+:ds7_5_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:TradingStatus :PausedTrade;
+     survey:ProportionOfResponses 80.6.
+
+:ds7_6_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 91.5.
+
+:ds7_6_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.0.
+
+:ds7_6_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:TradingStatus :PausedTrade;
+     survey:ProportionOfResponses 8.5.
+
+:ds7_7_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 95.0.
+
+:ds7_7_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.5.
+
+:ds7_7_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:TradingStatus :PausedTrade;
+     survey:ProportionOfResponses 4.5.
+
+:ds7_8_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 96.7.
+
+:ds7_8_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.3.
+
+:ds7_8_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:TradingStatus :PausedTrade;
+     survey:ProportionOfResponses 3.0.
+
+:ds7_9_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 91.5.
+
+:ds7_9_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.4.
+
+:ds7_9_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:TradingStatus :PausedTrade;
+     survey:ProportionOfResponses 8.1.
+
+:ds7_10_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :Education ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 86.8.
+
+:ds7_10_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :Education ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.6.
+
+:ds7_10_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :Education ;
+	 survey:TradingStatus :PausedTrade;
+     survey:ProportionOfResponses 12.6.
+
+:ds7_11_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 93.7.
+
+:ds7_11_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 1.4.
+
+:ds7_11_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:TradingStatus :PausedTrade;
+     survey:ProportionOfResponses 4.9.
+
+:ds7_12_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 20.5.
+
+:ds7_12_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.0.
+
+:ds7_12_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:TradingStatus :PausedTrade;
+     survey:ProportionOfResponses 79.5.
+
+:ds7_13_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :AllIndustries ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 76.7.
+
+:ds7_13_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :AllIndustries ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.5.
+
+:ds7_13_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds7 ;
+     survey:Industry :AllIndustries ;
+	 survey:TradingStatus :PausedTrade;
+     survey:ProportionOfResponses 22.8.
+
+:ds8 rdf:type qb:DataSet ;
+	 dc:title "Current trading status; Percentage of all responding businesses broken down by workforce size" .
+
+:ds8_1_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds8 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 74.8.
+
+:ds8_1_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds8 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.5.
+
+:ds8_1_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds8 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:TradingStatus :PausedTrade ;
+     survey:ProportionOfResponses 24.7.
+
+:ds8_2_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds8 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 79.8.
+
+:ds8_2_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds8 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.5.
+
+:ds8_2_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds8 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:TradingStatus :PausedTrade ;
+     survey:ProportionOfResponses 19.7.
+
+:ds8_3_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds8 ;
+     survey:WorkforceSize :Total ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 76.7.
+
+:ds8_3_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds8 ;
+     survey:WorkforceSize :Total ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.5.
+
+:ds8_3_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds8 ;
+     survey:WorkforceSize :Total ;
+	 survey:TradingStatus :PausedTrade ;
+     survey:ProportionOfResponses 22.8.
+
+:ds9 rdf:type qb:DataSet ;
+	 dc:title "Current trading status; Percentage of all responding businesses broken down by country" .
+
+:ds9_1_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds9 ;
+     survey:Country :England ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 77.8.
+
+:ds9_1_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds9 ;
+     survey:Country :England ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.4.
+
+:ds9_1_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds9 ;
+     survey:Country :England ;
+	 survey:TradingStatus :PausedTrade ;
+     survey:ProportionOfResponses 21.8.
+
+:ds9_2_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds9 ;
+     survey:Country :Wales ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 76.2.
+
+:ds9_2_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds9 ;
+     survey:Country :Wales ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 1.1.
+
+:ds9_2_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds9 ;
+     survey:Country :Wales ;
+	 survey:TradingStatus :PausedTrade ;
+     survey:ProportionOfResponses 22.7.
+
+:ds9_3_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds9 ;
+     survey:Country :Scotland ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 77.6.
+
+:ds9_3_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds9 ;
+     survey:Country :Scotland ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.7.
+
+:ds9_3_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds9 ;
+     survey:Country :Scotland ;
+	 survey:TradingStatus :PausedTrade ;
+     survey:ProportionOfResponses 21.7.
+
+:ds9_4_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds9 ;
+     survey:Country :NorthernIreland ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 72.8.
+
+:ds9_4_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds9 ;
+     survey:Country :NorthernIreland ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.0.
+
+:ds9_4_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds9 ;
+     survey:Country :NorthernIreland ;
+	 survey:TradingStatus :PausedTrade ;
+     survey:ProportionOfResponses 27.2.
+
+:ds9_5_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds9 ;
+     survey:Country :UnitedKingdom ;
+	 survey:TradingStatus :ContinuingTrade ;
+     survey:ProportionOfResponses 76.7.
+
+:ds9_5_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds9 ;
+     survey:Country :UnitedKingdom ;
+	 survey:TradingStatus :CeasedTrade ;
+     survey:ProportionOfResponses 0.5.
+
+:ds9_5_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds9 ;
+     survey:Country :UnitedKingdom ;
+	 survey:TradingStatus :PausedTrade ;
+     survey:ProportionOfResponses 22.8.
+
+:ds10 rdf:type qb:DataSet ;
+	 dc:title "Applied Initiatives; Percentage of businesses either continuing to trade or who have temporarily closed or paused trading broken down by industry" .
+
+:ds10_1_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 63.5.
+
+:ds10_1_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 14.0.
+
+:ds10_1_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 44.3.
+
+:ds10_1_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 19.3.
+
+:ds10_1_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 4.8.
+
+:ds10_1_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 8.6.
+
+:ds10_1_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 26.0.
+
+:ds10_2_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 68.6.
+
+:ds10_2_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 15.7.
+
+:ds10_2_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 57.1.
+
+:ds10_2_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 21.4.
+
+:ds10_2_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 5.7.
+
+:ds10_2_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 10.0.
+
+:ds10_2_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 21.4.
+
+:ds10_3_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 80.9.
+
+:ds10_3_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 13.5.
+
+:ds10_3_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 59.9.
+
+:ds10_3_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 28.7.
+
+:ds10_3_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 6.0.
+
+:ds10_3_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 9.6.
+
+:ds10_3_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 11.7.
+
+:ds10_4_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 72.6.
+
+:ds10_4_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 44.6.
+
+:ds10_4_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 60.1.
+
+:ds10_4_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 25.0.
+
+:ds10_4_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 13.3.
+
+:ds10_4_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 9.0.
+
+:ds10_4_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 15.5.
+
+:ds10_5_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 87.1.
+
+:ds10_5_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 78.2.
+
+:ds10_5_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 80.6.
+
+:ds10_5_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 42.2.
+
+:ds10_5_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 24.9.
+
+:ds10_5_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 20.6.
+
+:ds10_5_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 2.7.
+
+:ds10_6_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 76.6.
+
+:ds10_6_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 24.1.
+
+:ds10_6_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 55.3.
+
+:ds10_6_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 24.8.
+
+:ds10_6_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 6.4.
+
+:ds10_6_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 9.2.
+
+:ds10_6_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 16.7.
+
+:ds10_7_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 40.1.
+
+:ds10_7_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 8.2.
+
+:ds10_7_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 47.4.
+
+:ds10_7_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 13.7.
+
+:ds10_7_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 3.6.
+
+:ds10_7_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 3.8.
+
+:ds10_7_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 37.3.
+
+:ds10_8_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 62.2.
+
+:ds10_8_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 12.6.
+
+:ds10_8_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 66.2.
+
+:ds10_8_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 18.6.
+
+:ds10_8_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 4.9.
+
+:ds10_8_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 8.1.
+
+:ds10_8_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 20.7.
+
+:ds10_9_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 75.7.
+
+:ds10_9_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 20.1.
+
+:ds10_9_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 63.7.
+
+:ds10_9_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 20.5.
+
+:ds10_9_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 21.8.
+
+:ds10_9_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 12.3.
+
+:ds10_9_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 13.9.
+
+:ds10_10_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Education ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 40.5.
+
+:ds10_10_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Education ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 8.5.
+
+:ds10_10_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Education ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 26.3.
+
+:ds10_10_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Education ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 7.0.
+
+:ds10_10_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Education ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 2.2.
+
+:ds10_10_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Education ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 2.8.
+
+:ds10_10_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :Education ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 48.4.
+
+:ds10_11_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 34.5.
+
+:ds10_11_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 13.4.
+
+:ds10_11_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 16.2.
+
+:ds10_11_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 6.3.
+
+:ds10_11_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 10.6.
+
+:ds10_11_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 2.8.
+
+:ds10_11_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 55.6.
+
+:ds10_12_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 76.3.
+
+:ds10_12_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 57.2.
+
+:ds10_12_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 61.2.
+
+:ds10_12_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 33.1.
+
+:ds10_12_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 18.0.
+
+:ds10_12_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 18.3.
+
+:ds10_12_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 12.0.
+
+:ds10_13_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 67.2.
+
+:ds10_13_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 27.4.
+
+:ds10_13_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 56.4.
+
+:ds10_13_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 22.3.
+
+:ds10_13_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 11.2.
+
+:ds10_13_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 9.9.
+
+:ds10_13_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds10 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 20.7.
+
+:ds11 rdf:type qb:DataSet ;
+	 dc:title "Applied Initiatives; Percentage of businesses either continuing to trade or who have temporarily closed or paused trading broken down by workforce size" .
+
+:ds11_1_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 68.7.
+
+:ds11_1_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 27.2.
+
+:ds11_1_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 56.0.
+
+:ds11_1_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 22.4.
+
+:ds11_1_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 13.5.
+
+:ds11_1_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 11.2.
+
+:ds11_1_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 19.8.
+
+:ds11_2_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 64.7.
+
+:ds11_2_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 27.9.
+
+:ds11_2_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 57.1.
+
+:ds11_2_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 22.2.
+
+:ds11_2_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 7.3.
+
+:ds11_2_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 7.9.
+
+:ds11_2_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 22.3.
+
+:ds11_3_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 67.2.
+
+:ds11_3_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 27.4.
+
+:ds11_3_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 56.4.
+
+:ds11_3_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 22.3.
+
+:ds11_3_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 11.2.
+
+:ds11_3_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 9.9.
+
+:ds11_3_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds11 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 20.7.
+
+:ds12 rdf:type qb:DataSet ;
+	 dc:title "Applied Initiatives; Percentage of businesses either continuing to trade or who have temporarily closed or paused trading broken down by country" .
+
+:ds12_1_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :England ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 67.3.
+
+:ds12_1_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :England ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 27.4.
+
+:ds12_1_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :England ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 57.3.
+
+:ds12_1_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :England ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 22.4.
+
+:ds12_1_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :England ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 10.9.
+
+:ds12_1_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :England ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 9.7.
+
+:ds12_1_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :England ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 20.5.
+
+:ds12_2_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :Wales ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 73.8.
+
+:ds12_2_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :Wales ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 38.7.
+
+:ds12_2_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :Wales ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 65.1.
+
+:ds12_2_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :Wales ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 25.5.
+
+:ds12_2_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :Wales ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 13.7.
+
+:ds12_2_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :Wales ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 12.7.
+
+:ds12_2_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :Wales ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 13.4.
+
+:ds12_3_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :Scotland ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 71.7.
+
+:ds12_3_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :Scotland ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 29.0.
+
+:ds12_3_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :Scotland ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 63.0.
+
+:ds12_3_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :Scotland ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 23.5.
+
+:ds12_3_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :Scotland ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 7.5.
+
+:ds12_3_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :Scotland ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 9.8.
+
+:ds12_3_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :Scotland ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 16.5.
+
+:ds12_4_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :NorthernIreland ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 65.2.
+
+:ds12_4_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :NorthernIreland ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 30.4.
+
+:ds12_4_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :NorthernIreland ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 40.2.
+
+:ds12_4_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :NorthernIreland ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 13.0.
+
+:ds12_4_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :NorthernIreland ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 10.9.
+
+:ds12_4_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :NorthernIreland ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 6.5.
+
+:ds12_4_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :NorthernIreland ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 23.9.
+
+:ds12_5_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :UnitedKingdom ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 67.2.
+
+:ds12_5_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :UnitedKingdom ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 27.4.
+
+:ds12_5_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :UnitedKingdom ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 56.4.
+
+:ds12_5_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :UnitedKingdom ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 22.3.
+
+:ds12_5_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :UnitedKingdom ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 11.2.
+
+:ds12_5_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :UnitedKingdom ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 9.9.
+
+:ds12_5_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds12 ;
+     survey:Country :UnitedKingdom ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 20.7.
+
+:ds13 rdf:type qb:DataSet ;
+	 dc:title "Received Initiatives; Percentage of businesses either continuing to trade or who have temporarily closed or paused trading broken down by industry" .
+
+:ds13_1_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 19.9.
+
+:ds13_1_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 7.9.
+
+:ds13_1_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 33.0.
+
+:ds13_1_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 14.7.
+
+:ds13_1_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 2.6.
+
+:ds13_1_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 1.3.
+
+:ds13_1_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 23.7.
+
+:ds13_2_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 28.6.
+
+:ds13_2_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 4.3.
+
+:ds13_2_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 37.1.
+
+:ds13_2_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 15.7.
+
+:ds13_2_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 1.4.
+
+:ds13_2_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 4.3.
+
+:ds13_2_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 24.3.
+
+:ds13_3_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 29.1.
+
+:ds13_3_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 5.7.
+
+:ds13_3_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 44.3.
+
+:ds13_3_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 23.4.
+
+:ds13_3_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 2.1.
+
+:ds13_3_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 1.8.
+
+:ds13_3_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 27.0.
+
+:ds13_4_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 23.9.
+
+:ds13_4_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 33.4.
+
+:ds13_4_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 46.9.
+
+:ds13_4_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 18.3.
+
+:ds13_4_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 9.1.
+
+:ds13_4_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 1.5.
+
+:ds13_4_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 16.0.
+
+:ds13_5_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 25.1.
+
+:ds13_5_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 63.3.
+
+:ds13_5_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 59.6.
+
+:ds13_5_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 30.6.
+
+:ds13_5_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 17.8.
+
+:ds13_5_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 3.5.
+
+:ds13_5_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 12.9.
+
+:ds13_6_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 28.7.
+
+:ds13_6_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 14.5.
+
+:ds13_6_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 44.0.
+
+:ds13_6_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 18.8.
+
+:ds13_6_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 2.5.
+
+:ds13_6_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 2.5.
+
+:ds13_6_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 18.4.
+
+:ds13_7_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 15.4.
+
+:ds13_7_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 3.1.
+
+:ds13_7_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 39.7.
+
+:ds13_7_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 10.6.
+
+:ds13_7_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 1.7.
+
+:ds13_7_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 1.0.
+
+:ds13_7_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 12.7.
+
+:ds13_8_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 21.6.
+
+:ds13_8_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 7.8.
+
+:ds13_8_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 51.8.
+
+:ds13_8_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 14.6.
+
+:ds13_8_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 2.2.
+
+:ds13_8_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 2.3.
+
+:ds13_8_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 17.6.
+
+:ds13_9_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 28.0.
+
+:ds13_9_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 12.0.
+
+:ds13_9_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 46.9.
+
+:ds13_9_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 14.7.
+
+:ds13_9_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 14.4.
+
+:ds13_9_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 1.7.
+
+:ds13_9_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 20.6.
+
+:ds13_10_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Education ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 9.8.
+
+:ds13_10_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Education ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 3.8.
+
+:ds13_10_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Education ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 18.4.
+
+:ds13_10_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Education ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 5.7.
+
+:ds13_10_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Education ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 0.0.
+
+:ds13_10_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Education ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 0.0.
+
+:ds13_10_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :Education ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 22.8.
+
+:ds13_11_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 8.5.
+
+:ds13_11_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 9.2.
+
+:ds13_11_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 15.5.
+
+:ds13_11_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 4.2.
+
+:ds13_11_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 7.0.
+
+:ds13_11_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 0.0.
+
+:ds13_11_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 14.1.
+
+:ds13_12_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 21.9.
+
+:ds13_12_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 45.0.
+
+:ds13_12_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 43.5.
+
+:ds13_12_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 25.5.
+
+:ds13_12_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 10.8.
+
+:ds13_12_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 4.3.
+
+:ds13_12_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 17.6.
+
+:ds13_13_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 22.2.
+
+:ds13_13_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 19.1.
+
+:ds13_13_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 42.7.
+
+:ds13_13_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 16.8.
+
+:ds13_13_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 7.0.
+
+:ds13_13_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 1.8.
+
+:ds13_13_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds13 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 18.9.
+
+:ds14 rdf:type qb:DataSet ;
+	 dc:title "Received Initiatives; Percentage of businesses either continuing to trade or who have temporarily closed or paused trading broken down by workforce size" .
+
+:ds14_1_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 22.1.
+
+:ds14_1_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 18.6.
+
+:ds14_1_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 40.7.
+
+:ds14_1_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 16.8.
+
+:ds14_1_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 8.5.
+
+:ds14_1_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 2.3.
+
+:ds14_1_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 20.5.
+
+:ds14_2_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 22.4.
+
+:ds14_2_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 20.0.
+
+:ds14_2_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 46.1.
+
+:ds14_2_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 16.8.
+
+:ds14_2_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 4.6.
+
+:ds14_2_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 1.1.
+
+:ds14_2_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 16.3.
+
+:ds14_3_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 22.2.
+
+:ds14_3_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 19.1.
+
+:ds14_3_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 42.7.
+
+:ds14_3_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 16.8.
+
+:ds14_3_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 7.0.
+
+:ds14_3_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 1.8.
+
+:ds14_3_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds14 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 18.9.
+
+:ds15 rdf:type qb:DataSet ;
+	 dc:title "Intended Initiatives; Percentage of businesses either continuing to trade or who have temporarily closed or paused trading broken down by industry" .
+
+:ds15_1_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 38.3.
+
+:ds15_1_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 8.1.
+
+:ds15_1_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 16.7.
+
+:ds15_1_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 9.2.
+
+:ds15_1_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 2.8.
+
+:ds15_1_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 6.6.
+
+:ds15_1_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Manufacturing ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 48.1.
+
+:ds15_2_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 38.6.
+
+:ds15_2_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 7.1.
+
+:ds15_2_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 22.9.
+
+:ds15_2_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 14.3.
+
+:ds15_2_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 2.9.
+
+:ds15_2_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 7.1.
+
+:ds15_2_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 45.7.
+
+:ds15_3_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 42.9.
+
+:ds15_3_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 3.2.
+
+:ds15_3_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 17.4.
+
+:ds15_3_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 9.6.
+
+:ds15_3_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 5.0.
+
+:ds15_3_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 11.0.
+
+:ds15_3_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Construction ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 42.2.
+
+:ds15_4_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 32.1.
+
+:ds15_4_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 9.3.
+
+:ds15_4_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 15.8.
+
+:ds15_4_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 7.6.
+
+:ds15_4_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 4.2.
+
+:ds15_4_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 8.3.
+
+:ds15_4_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 53.8.
+
+:ds15_5_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 40.4.
+
+:ds15_5_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 18.0.
+
+:ds15_5_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 23.5.
+
+:ds15_5_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 13.7.
+
+:ds15_5_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 6.1.
+
+:ds15_5_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 12.2.
+
+:ds15_5_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AccommodationAndFoodServiceActivities ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 39.8.
+
+:ds15_6_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 35.5.
+
+:ds15_6_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 9.6.
+
+:ds15_6_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 19.9.
+
+:ds15_6_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 7.8.
+
+:ds15_6_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 2.1.
+
+:ds15_6_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 7.4.
+
+:ds15_6_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :TransportationAndStorage ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 48.9.
+
+:ds15_7_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 26.0.
+
+:ds15_7_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 7.0.
+
+:ds15_7_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 16.3.
+
+:ds15_7_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 6.7.
+
+:ds15_7_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 2.9.
+
+:ds15_7_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 5.0.
+
+:ds15_7_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :InformationAndCommunication ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 58.7.
+
+:ds15_8_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 35.0.
+
+:ds15_8_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 7.3.
+
+:ds15_8_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 22.8.
+
+:ds15_8_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 8.3.
+
+:ds15_8_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 2.3.
+
+:ds15_8_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 7.4.
+
+:ds15_8_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :ProfessionalScientificAndTechnicalActivities ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 50.3.
+
+:ds15_9_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 40.1.
+
+:ds15_9_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 8.9.
+
+:ds15_9_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 22.7.
+
+:ds15_9_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 10.2.
+
+:ds15_9_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 6.3.
+
+:ds15_9_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 9.0.
+
+:ds15_9_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AdministrativeAndSupportServiceActivities ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 45.0.
+
+:ds15_10_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Education ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 45.9.
+
+:ds15_10_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Education ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 9.8.
+
+:ds15_10_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Education ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 17.4.
+
+:ds15_10_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Education ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 2.2.
+
+:ds15_10_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Education ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 0.0.
+
+:ds15_10_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Education ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 6.6.
+
+:ds15_10_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :Education ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 42.1.
+
+:ds15_11_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 31.0.
+
+:ds15_11_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 4.2.
+
+:ds15_11_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 9.9.
+
+:ds15_11_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 5.6.
+
+:ds15_11_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 3.5.
+
+:ds15_11_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 1.4.
+
+:ds15_11_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :HumanHealthAndSocialWorkActivities ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 58.5.
+
+:ds15_12_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 41.0.
+
+:ds15_12_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 12.2.
+
+:ds15_12_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 21.2.
+
+:ds15_12_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 10.4.
+
+:ds15_12_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 5.8.
+
+:ds15_12_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 10.8.
+
+:ds15_12_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :ArtsEntertainmentAndRecreation ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 39.2.
+
+:ds15_13_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 36.8.
+
+:ds15_13_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 9.1.
+
+:ds15_13_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 19.0.
+
+:ds15_13_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 8.8.
+
+:ds15_13_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 3.9.
+
+:ds15_13_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 8.0.
+
+:ds15_13_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds15 ;
+     survey:Industry :AllIndustries ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 48.2.
+
+:ds16 rdf:type qb:DataSet ;
+	 dc:title "Intended Initiatives; Percentage of businesses either continuing to trade or who have temporarily closed or paused trading broken down by workforce size" .
+
+:ds16_1_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 36.7.
+
+:ds16_1_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 8.9.
+
+:ds16_1_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 20.2.
+
+:ds16_1_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 9.4.
+
+:ds16_1_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 4.6.
+
+:ds16_1_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 8.5.
+
+:ds16_1_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :LessThan250 ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 48.0.
+
+:ds16_2_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 37.0.
+
+:ds16_2_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 9.4.
+
+:ds16_2_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 16.9.
+
+:ds16_2_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 7.8.
+
+:ds16_2_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 2.7.
+
+:ds16_2_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 7.2.
+
+:ds16_2_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :250AndMore ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 48.6.
+
+:ds16_3_1 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :CoronavirusScheme ;
+     survey:ProportionOfTradingResponses 36.8.
+
+:ds16_3_2 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :BusinessRatesHoliday ;
+     survey:ProportionOfTradingResponses 9.1.
+
+:ds16_3_3 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :DeferringVAT ;
+     survey:ProportionOfTradingResponses 19.0.
+
+:ds16_3_4 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :HMRCScheme ;
+     survey:ProportionOfTradingResponses 8.8.
+
+:ds16_3_5 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :GovernmentGrantLoanSchemes ;
+     survey:ProportionOfTradingResponses 3.9.
+
+:ds16_3_6 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :FinanceAgreements ;
+     survey:ProportionOfTradingResponses 8.0.
+
+:ds16_3_7 rdf:type qb:Observation ;
+	 qb:dataSet :ds16 ;
+     survey:WorkforceSize :Total ;
+	 survey:Initiative :None ;
+     survey:ProportionOfTradingResponses 48.2.
+
